@@ -1,1 +1,64 @@
-<h1>test</h1>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="个人日记本 - 记录每一天的收获与感悟">
+    <meta name="keywords" content="日记本,日记,个人笔记,记事本">
+    <meta name="author" content="Your Name">
+    <title>我的个人日记本</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>我的日记本</h1>
+            <p class="date" id="currentDate"></p>
+        </header>
+        
+        <main>
+            <div class="diary-entry">
+                <div class="toolbar">
+                    <select id="mood-selector">
+                        <option value="">选择心情</option>
+                        <option value="happy">开心</option>
+                        <option value="sad">难过</option>
+                        <option value="excited">激动</option>
+                        <option value="tired">疲惫</option>
+                    </select>
+                    <input type="text" id="tags" placeholder="添加标签（用逗号分隔）">
+                </div>
+                <textarea placeholder="今天学到的..."></textarea>
+                <div class="button-group">
+                    <button class="clear-btn">清空</button>
+                    <button class="save-btn">保存</button>
+                </div>
+            </div>
+            
+            <div class="diary-list">
+                <div class="list-header">
+                    <h2>历史日记</h2>
+                    <div class="filter-tools">
+                        <input type="text" id="search" placeholder="搜索日记...">
+                        <select id="sort-selector">
+                            <option value="newest">最新优先</option>
+                            <option value="oldest">最早优先</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="entry-cards">
+                    <!-- 日记卡片将通过 JavaScript 动态添加 -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 个人日记本</p>
+        </footer>
+    </div>
+
+    <!-- 脚本引用放在底部 -->
+    <script src="script.js"></script>
+</body>
+</html>
